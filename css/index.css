@@ -94,12 +94,13 @@ i{
 	height: 0; 
 	background: #fff;
 	position: absolute;
-	right: 0px;
+	right: 0;
 	z-index: 10;
 	font-size: 12px;
 	color: #333;
 	text-align: center;
 	line-height: 100px;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.1);
 	overflow: hidden;
 	transition: all .5s;
 }
@@ -136,6 +137,7 @@ i{
 	float: left;
 	padding-left: 30px;
 	padding-top: 12px;
+	position: relative;
 }
 .title .bar ul li{
 	float: left;
@@ -145,9 +147,6 @@ i{
 	line-height: 88px;
 
 }
-.title .bar .find-list .topic-list{
-	display: none;
-}
 .title .bar ul li:nth-child(1){
 	width: 142px;
 	padding-right: 15px;
@@ -156,31 +155,31 @@ i{
 	width: 84px;
 }
 .title .bar ul li:nth-child(3){
-	width: 52px;	
+	width: 52px;
 }
 .title .bar ul li:nth-child(4){
-	width: 52px;	
+	width: 52px;
 }
 .title .bar ul li:nth-child(5){
-	width: 68px;	
+	width: 68px;
 }
 .title .bar ul li:nth-child(6){
-	width: 52px;	
+	width: 52px;
 }
 .title .bar ul li:nth-child(7){
-	width: 52px;	
+	width: 52px;
 }
 .title .bar ul li:nth-child(8){
-	width: 68px;	
+	width: 68px;
 }
 .title .bar ul li:nth-child(9){
-	width: 84px;	
+	width: 84px;
 }
 .title .bar ul li:nth-child(10){
-	width: 52px;	
+	width: 52px;
 }
 .title .bar ul li:nth-child(11){
-	width: 52px;	
+	width: 52px;
 }
 .title .bar ul li a{
 	text-decoration: none;
@@ -189,60 +188,13 @@ i{
 .title .bar ul li a:hover{
 	color: #ff6700;
 }
-.title .bar ul li .topic-list{
-	border-top: 1px solid #b0b0b0;
-	background-color: #fff;
-	height: 234px;
-	width: 1349px;
-	position: absolute;
-	top: 100px;
-	left: 0;
-	z-index:3;
-	display: none;
-	float: left;
-	padding: 0 10px 0 62px;
-}
-.title .bar ul li .topic-list .con-list{
-	width: 16%;
-	height: 100%;
-	/* background-color: red; */
-	padding: 0 0 30px;
-	position: relative;
-}
-.title .bar ul li .topic-list .con-list::after{
-	content: "";
-	display: block;
-	width: 1px;
-	height: 100px;
-	background-color: #b0b0b0;
-	position: absolute;
-	top: 30px;
-	right: 0;
-
-}
-.title .bar ul li .topic-list .con-list:nth-child(6)::after{
-	display: none;
-}
-.title .bar ul li .topic-list .con-list img{
-	width: 160px;
-	height: 100px;
-	display: block;
-	margin: 30px auto 0;
-}
-.title .bar ul li .topic-list .con-list p{
-	color: #333;
-	font-size: 12px;
-	line-height: 18px;
-	padding: 20px 0 5px;
-	/* background-color: blue; */
-}
-.title .bar ul li .topic-list .con-list span{
-	color: #ff6700;
-	display: block;
-	font-size: 12px;
-	line-height: 18px;
-	padding: 10px 0;
-	/* background-color: red; */
+.title .bigs{
+	width:100%;
+	height:200px;
+	background:red;
+	position:absolute;
+	top:100;
+	left:0;
 }
 .title .box{
 	float: left;
@@ -277,7 +229,7 @@ i{
 .title .box .cont .stn{
 	width: 50px;
 	height: 100%;
-	padding: 0 6px; 
+	padding: 0 6px;
 	background: #fff;
 	border: none;
 }
@@ -455,11 +407,11 @@ i{
         justify-content: space-around;
 }
 .banner .dots .dotBox{
-        width: 15px;
-        height: 15px;
+        width: 10px;
+        height: 10px;
         border-radius: 50%;
         background:#fff;
-        border: 2px solid #757575; 
+        border: 1px solid #757575;
 }
 .banner .dots .active{
 	background-color:#999;
@@ -729,22 +681,37 @@ i{
 	/* background-color: blue; */
 }
 .evade .evade-shopping .shopping-pic ul{
-	width: 3720px;
+	/*width: 3720px;*/
 	height: 100%;
-	transition: all 1s;
+
 }
 .evade .evade-shopping .shopping-pic ul li{
 	width: 234px;
-	height: 100%;
+	height: 339px;
 	float: left;
 	margin-left: 14px; 
 	background-color: #fafafa;
 	border-top: 1px solid #e53935;
 }
-.evade .shopping-pic ul li:nth-child(1){
+.evade .shopping-pic ul .zuo li:nth-child(1){
+	padding-top:40px;
 	margin-left: 0;	
 	border-top: 1px solid #e53935;
 	/* padding-top: 39px; */
+}
+.evade .evade-shopping .shopping-pic .all{
+	width:994px;
+	height:339px;
+	position:absolute;
+	right:0;
+	top:58px;
+
+	overflow: hidden;
+}
+.evade .evade-shopping .shopping-pic .all .lm{
+	width:3720px;
+	transition: all 1s;
+	background:green;
 }
 .evade .shopping-pic ul li .time{
 	font-size: 21px;
@@ -1000,7 +967,7 @@ i{
 	width: 280px;
 	height: 40px;
 	position: absolute;
-	top: 0px;
+	top: 0;
 	right: 0;
 /* 	background-color: yellow; */
 	padding-top: 16px;
@@ -1076,7 +1043,7 @@ i{
 	/*display:none;*/
 	width:992px;
 	height:614px;
-	background:red;
+	/*background:red;*/
 	position:absolute;
 	top:0;
 	right:0;
@@ -1085,7 +1052,7 @@ i{
 	display:none;
 	width:992px;
 	height:614px;
-	background:red;
+	/*background:red;*/
 	position:absolute;
 	top:0;
 	right:0;
@@ -1094,7 +1061,7 @@ i{
 	display:none;
 	width:992px;
 	height:614px;
-	background:red;
+	/*background:red;*/
 	position:absolute;
 	top:0;
 	right:0;
@@ -1103,7 +1070,7 @@ i{
 	display:none;
 	width:992px;
 	height:614px;
-	background:red;
+	/*background:red;*/
 	position:absolute;
 	top:0;
 	right:0;
@@ -1937,7 +1904,91 @@ margin: 0 30px;
 	right: 33px;
 	line-height: 39px;
 	text-align: center;
+	display:none;
+
 }
+.back .return:hover .k{
+	display:block;
+}
+.back .return .tops{
+	position:relative;
+	background:red;
+}
+.back .user{
+	display:none;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-weight:400;
+	line-height: 30px;
+	padding-right:6px;
+	width:70px;
+	height:30px;
+	background-image: url("../img/qp.png");
+	background-size:70px 30px;
+	background-repeat: no-repeat;
+	position:absolute;
+	left:-70px;
+	top:4px;
+}
+.back ul li:hover .user{
+	display:block;
+}
+.back .links{
+	display:none;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-weight:400;
+	line-height: 30px;
+	padding-right:6px;
+	width:70px;
+	height:30px;
+	background-image: url("../img/qp.png");
+	background-size:70px 30px;
+	background-repeat: no-repeat;
+	position:absolute;
+	left:-70px;
+	top:44px;
+}
+.back ul li:hover .links{
+	display:block;
+}
+.back .shops{
+	display:none;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-weight:400;
+	line-height: 30px;
+	padding-right:6px;
+	width:100px;
+	height:30px;
+	background-image: url("../img/qp.png");
+	background-size:94px 30px;
+	background-repeat: no-repeat;
+	position:absolute;
+	left:-94px;
+	top:84px;
+	/*background:red;*/
+}
+.back ul li:hover .shops{
+	display:block;
+}
+.back .return .k{
+	display: none;
+	color: #b0b0b0;
+	font-size: 12px;
+	font-weight:400;
+	line-height: 30px;
+	padding-right:10px;
+	width:60px;
+	height:30px;
+	background-image: url("../img/qp.png");
+	background-size:58px 30px;
+	background-repeat: no-repeat;
+	position:absolute;
+	left:-65px;
+	top:-35px;
+}
+
 .back .return i{
 	font-size: 20px;
 	color:#b0b0b0; 
